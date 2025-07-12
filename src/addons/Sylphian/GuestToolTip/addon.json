@@ -1,0 +1,14 @@
+{
+    "legacy_addon_id": "",
+    "title": "Sylphian - Guest Tool Tip",
+    "description": "Sylphians addon that hides user tooltips from guests.",
+    "version_id": 1000010,
+    "version_string": "1.0.0 Alpha",
+    "dev": "QuackieMackie",
+    "dev_url": "https://github.com/QuackieMackie",
+    "faq_url": "",
+    "support_url": "",
+    "extra_urls": [],
+    "require": [],
+    "icon": "fa-user-circle"
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="node_list_forum" modification_key="syl_node_list_forum" description="Removes the hover tool tip and adds the description under the forum title." execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[				<h3 class="node-title">
+					<a href="{{ link('forums', $node) }}" data-xf-init="{{ $descriptionDisplay == 'tooltip' ? 'element-tooltip' : '' }}" data-shortcut="node-description">{$node.title}</a>
+				</h3>
+				<xf:if is="$descriptionDisplay != 'none' && $node.description">
+					<div class="node-description {{ $descriptionDisplay == 'tooltip' ? 'node-description--tooltip js-nodeDescTooltip' : '' }}">{$node.description|raw}</div>
+				</xf:if>]]></find>
+    <replace><![CDATA[				<h3 class="node-title">
+				  <a href="{{ link('forums', $node) }}">{{$node.title}}</a>
+				</h3>
+
+				<xf:if is="$node.description">
+				  <div class="node-description">{$node.description|raw}</div>
+				</xf:if>]]></replace>
+  </modification>
+  <modification type="public" template="node_list_link_forum" modification_key="syl_node_list_link_forum" description="Removes the hover tool tip and adds the description under the link forum title." execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[				<h3 class="node-title">
+					 <a href="{{ link('link-forums', $node) }}" data-xf-init="{{ $descriptionDisplay == 'tooltip' ? 'element-tooltip' : '' }}" data-shortcut="node-description">{$node.title}</a>
+				</h3>
+				<xf:if is="$descriptionDisplay != 'none' && $node.description">
+					<div class="node-description {{ $descriptionDisplay == 'tooltip' ? 'node-description--tooltip js-nodeDescTooltip' : '' }}">{$node.description|raw}</div>
+				</xf:if>]]></find>
+    <replace><![CDATA[				<h3 class="node-title">
+					<a href="{{ link('link-forums', $node) }}">{{$node.title}}</a>
+				</h3>
+
+				<xf:if is="$node.description">
+					<div class="node-description">{$node.description|raw}</div>
+				</xf:if>]]></replace>
+  </modification>
+</template_modifications>

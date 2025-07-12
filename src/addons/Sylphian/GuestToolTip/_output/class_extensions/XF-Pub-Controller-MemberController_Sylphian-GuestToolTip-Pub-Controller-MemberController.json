@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\Pub\\Controller\\MemberController",
+    "to_class": "Sylphian\\GuestToolTip\\Pub\\Controller\\MemberController",
+    "execute_order": 10,
+    "active": true
+}

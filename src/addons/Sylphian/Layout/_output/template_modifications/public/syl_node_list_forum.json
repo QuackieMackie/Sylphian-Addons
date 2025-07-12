@@ -1,0 +1,9 @@
+{
+    "template": "node_list_forum",
+    "description": "Removes the hover tool tip and adds the description under the forum title.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "\t\t\t\t<h3 class=\"node-title\">\n\t\t\t\t\t<a href=\"{{ link('forums', $node) }}\" data-xf-init=\"{{ $descriptionDisplay == 'tooltip' ? 'element-tooltip' : '' }}\" data-shortcut=\"node-description\">{$node.title}</a>\n\t\t\t\t</h3>\n\t\t\t\t<xf:if is=\"$descriptionDisplay != 'none' && $node.description\">\n\t\t\t\t\t<div class=\"node-description {{ $descriptionDisplay == 'tooltip' ? 'node-description--tooltip js-nodeDescTooltip' : '' }}\">{$node.description|raw}</div>\n\t\t\t\t</xf:if>",
+    "replace": "\t\t\t\t<h3 class=\"node-title\">\n\t\t\t\t  <a href=\"{{ link('forums', $node) }}\">{{$node.title}}</a>\n\t\t\t\t</h3>\n\n\t\t\t\t<xf:if is=\"$node.description\">\n\t\t\t\t  <div class=\"node-description\">{$node.description|raw}</div>\n\t\t\t\t</xf:if>"
+}

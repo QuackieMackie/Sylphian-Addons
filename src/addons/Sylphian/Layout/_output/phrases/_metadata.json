@@ -1,0 +1,38 @@
+{
+    "guest_widget_paragraph_1.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "6a288a0bb43d86bbe6625398812dab2b"
+    },
+    "guest_widget_paragraph_2.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d1290ab03e28c5f535a1cbe379936a08"
+    },
+    "guest_widget_site_warning.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d39abd5918399e125cfdcfdcdc65a7a9"
+    },
+    "guest_widget_title.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "ac767da7235ef3ef6e6644bf331aa80b"
+    },
+    "widget_def.syl_guest_widget.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "132f16329b9f03d3c472b00c4b27939b"
+    },
+    "widget_def_desc.syl_guest_widget.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+}

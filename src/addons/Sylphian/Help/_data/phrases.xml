@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="help_page_desc.rules" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[A list of rules to follow while using Sylphian.]]></phrase>
+  <phrase title="help_page_desc.staff" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Meet the staff members who help maintain Sylphian.]]></phrase>
+  <phrase title="help_page_title.rules" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Rules]]></phrase>
+  <phrase title="help_page_title.staff" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Staff Members]]></phrase>
+  <phrase title="meet_our_forum_staff_administrators_and_moderators" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Meet the dedicated team who keep Sylphian running.]]></phrase>
+  <phrase title="no_moderators_to_display" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[There are currently no moderators to display.]]></phrase>
+  <phrase title="staff_members" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Staff Members]]></phrase>
+</phrases>

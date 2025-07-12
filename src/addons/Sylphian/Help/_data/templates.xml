@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="public" title="_help_page_rules" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<div class="block">
+	<div class="block-container">
+		<div class="block-body block-row">
+			<h2>Community Rules & Guidelines</h2>
+			<p>Welcome to <strong>Sylphian</strong>. This community is built as a safe, supportive, and inclusive space for LGBTQ+ individuals and allies. All users are required to follow the rules below without exception. Failure to comply may result in account restrictions, suspension, or a permanent ban, depending on the nature of the violation. These rules apply to all public and private areas of the forum, including DMs.</p>
+
+			<h3>1. Zero Tolerance for Disrespect</h3>
+			<ul>
+				<li>Harassment, insults, threats, or personal attacks are not allowed under any circumstances.</li>
+				<li>Misgendering, deadnaming, or ignoring someone’s stated pronouns is not permitted.</li>
+				<li>If you cannot engage respectfully, do not engage at all.</li>
+			</ul>
+
+			<h3>2. No Discrimination</h3>
+			<ul>
+				<li>Any form of bigotry is strictly prohibited. This includes but is not limited to: racism, homophobia, transphobia, xenophobia, ableism, ageism, or misogyny.</li>
+				<li>This is an LGBTQ+ affirming space. If you hold views in conflict with that, this forum is not for you.</li>
+			</ul>
+
+			<h3>3. Content Warnings Are Required</h3>
+			<ul>
+				<li>Posts discussing sensitive topics such as abuse, trauma, self-harm, or violence must include a content warning at the beginning.</li>
+				<li>Use spoiler tags appropriately to hide sensitive or potentially triggering content.</li>
+			</ul>
+
+			<h3>4. NSFW and Adult Content Rules</h3>
+			<ul>
+				<li>NSFW content is allowed only in explicitly marked and access-restricted sections of the forum.</li>
+				<li>You must be of legal age in your country to access or post NSFW content. No exceptions.</li>
+				<li>No illegal material of any kind, including revenge porn, real-life nudity without consent, or underage content (fictional or real) is allowed.</li>
+			</ul>
+
+			<h3>5. Illegal Activity is Forbidden</h3>
+			<ul>
+				<li>Do not share or link to pirated content, illegal downloads, or instructions for committing illegal acts.</li>
+				<li>Doxxing — sharing any private or identifying information about another person — is an instant, permanent ban.</li>
+			</ul>
+
+			<h3>6. No Spam or Unapproved Promotion</h3>
+			<ul>
+				<li>Spamming, bot activity, or mass-advertising will result in immediate suspension.</li>
+				<li>You may share personal projects only in designated sections and only if they are relevant to the discussion.</li>
+			</ul>
+
+			<h3>7. Moderator Decisions Are Final</h3>
+			<ul>
+				<li>If a moderator issues a directive, you are expected to follow it immediately.</li>
+				<li>Publicly arguing with staff, mini-modding, or undermining moderation will result in disciplinary action.</li>
+				<li>Appeals can be made privately through the proper channels — not in public threads.</li>
+			</ul>
+
+			<h3>8. One Account Per Person</h3>
+			<ul>
+				<li>Each user is allowed one account. Creating multiple accounts without prior staff approval is prohibited.</li>
+				<li>Ban evasion — creating a new account to bypass a ban — results in a permanent ban on all accounts.</li>
+			</ul>
+
+			<h3>9. Privacy is Non-Negotiable</h3>
+			<ul>
+				<li>Do not request or share anyone's real name, location, social media, or private photos — even if they posted it elsewhere.</li>
+				<li>Outing a user’s LGBTQ+ identity, legal name, or other private information without their explicit consent will result in an instant and permanent ban. No exceptions.</li>
+			</ul>
+
+			<hr>
+
+			<h3>Reporting Violations</h3>
+			<p>If you witness or experience any rule violations, use the <strong>report</strong> button or contact staff immediately. Reports are confidential and taken seriously. Do not engage with the violator directly.</p>
+
+			<p class="u-muted"><em>By registering and participating on Sylphian, you agree to these rules and our Terms of Service. While rule changes will be announced, it is ultimately each user's responsibility to stay informed. Thank you for helping us keep Sylphian a safe and affirming space for everyone.</em></p>
+		</div>
+	</div>
+</div>]]></template>
+  <template type="public" title="_help_page_staff" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<h1 class="page-title">{{ phrase('staff_members') }}</h1>
+<p class="page-description">
+    {{ phrase('meet_our_forum_staff_administrators_and_moderators') }}
+</p>
+
+<div class="block">
+    <div class="block-container">
+        <h2 class="block-header">{{ phrase('administrators') }}</h2>
+        <div class="block-body">
+            <xf:if is="$adminUsers.count()">
+                <div class="staff-list">
+                    <xf:foreach loop="$adminUsers" value="$user">
+                        <div class="staff-card block-row">
+                            <div class="staff-card-main">
+                                <div class="staff-card-avatar">
+                                    <xf:avatar user="$user" size="m" />
+                                    <span class="staff-role-badge staff-role-admin">
+                                        {{ phrase('administrator') }}
+                                    </span>
+                                </div>
+                                <div class="staff-card-content">
+                                    <h3 class="staff-card-name">
+                                        <a href="{{ link('members', $user) }}" class="username">{{ $user.username }}</a>
+                                    </h3>
+                                    <xf:if is="$user.Profile.custom_fields.pronouns">
+                                        <div class="staff-pronouns">
+                                            <xf:if is="is_array($user.Profile.custom_fields.pronouns)">
+                                                <xf:foreach loop="$user.Profile.custom_fields.pronouns" value="$pronoun">
+                                                    <span class="userBanner userBanner--syl_pro_{$pronoun}">
+                                                        {{ phrase_dynamic('user_field_choice.pronouns_' . $pronoun) }}
+                                                    </span>
+                                                </xf:foreach>
+                                                <xf:else />
+                                                <span class="userBanner userBanner--syl_pro_{$user.Profile.custom_fields.pronouns}">
+                                                    {{ phrase_dynamic('user_field_choice.pronouns_' . $user.Profile.custom_fields.pronouns) }}
+                                                </span>
+                                            </xf:if>
+                                        </div>
+                                    </xf:if>
+                                    <a href="{{ link('conversations/add', '', {'to': $user.username}) }}" class="button button--small staff-message-button">
+                                        {{ phrase('message') }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </xf:foreach>
+                </div>
+                <xf:else />
+                <div class="block-row">{{ phrase('no_administrators_to_display') }}</div>
+            </xf:if>
+        </div>
+    </div>
+</div>
+
+<div class="block">
+    <div class="block-container">
+        <h2 class="block-header">{{ phrase('moderators') }}</h2>
+        <div class="block-body">
+            <xf:if is="$modUsers.count()">
+                <div class="staff-list">
+                    <xf:foreach loop="$modUsers" value="$user">
+                        <div class="staff-card block-row">
+                            <div class="staff-card-main">
+                                <div class="staff-card-avatar">
+                                    <xf:avatar user="$user" size="m" />
+                                    <span class="staff-role-badge staff-role-mod">
+                                        {{ phrase('moderator') }}
+                                    </span>
+                                </div>
+                                <div class="staff-card-content">
+                                    <h3 class="staff-card-name">
+                                        <a href="{{ link('members', $user) }}" class="username">{{ $user.username }}</a>
+                                    </h3>
+                                    <xf:if is="$user.Profile.custom_fields.pronouns">
+                                        <div class="staff-pronouns">
+                                            <xf:if is="is_array($user.Profile.custom_fields.pronouns)">
+                                                <xf:foreach loop="$user.Profile.custom_fields.pronouns" value="$pronoun">
+                                                    <span class="userBanner userBanner--syl_pro_{$pronoun}">
+                                                        {{ phrase_dynamic('user_field_choice.pronouns_' . $pronoun) }}
+                                                    </span>
+                                                </xf:foreach>
+                                                <xf:else />
+                                                <span class="userBanner userBanner--syl_pro_{$user.Profile.custom_fields.pronouns}">
+                                                    {{ phrase_dynamic('user_field_choice.pronouns_' . $user.Profile.custom_fields.pronouns) }}
+                                                </span>
+                                            </xf:if>
+                                        </div>
+                                    </xf:if>
+                                    <a href="{{ link('conversations/add', '', {'to': $user.username}) }}" class="button button--small staff-message-button">
+                                        {{ phrase('message') }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </xf:foreach>
+                </div>
+                <xf:else />
+                <div class="block-row">{{ phrase('no_moderators_to_display') }}</div>
+            </xf:if>
+        </div>
+    </div>
+</div>
+
+<xf:css src="public:app_user_banners.less" />
+<xf:css src="public:extra.less" />
+<xf:css src="staff_page.less" />]]></template>
+  <template type="public" title="staff_page.less" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[.page-title {
+    font-size: @xf-fontSizeLargest;
+    font-weight: 700;
+    margin-bottom: @xf-paddingLarge;
+}
+
+.page-description {
+    font-size: @xf-fontSizeSmall;
+    color: @xf-textColorMuted;
+    margin-bottom: @xf-paddingLarge;
+}
+
+.staff-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.staff-card {
+    flex: 1 1 280px;
+    max-width: 280px;
+    min-width: 200px;
+    border: 1px solid @xf-borderColorLight;
+    border-radius: 6px;
+    padding: @xf-paddingMedium;
+    background: @xf-contentBg;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    margin-bottom: 8px;
+
+    &:hover {
+        box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+        transform: translateY(-2px);
+    }
+}
+
+.staff-card-main {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.staff-card-avatar {
+    position: relative;
+    flex-shrink: 0;
+    padding-bottom: 16px;
+    margin: 0 auto;
+
+    .staff-role-badge {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 4px;
+        font-size: 10px;
+        font-weight: 600;
+        color: #fff;
+        padding: 2px 6px;
+        border-radius: 12px;
+        text-transform: uppercase;
+        user-select: none;
+        white-space: nowrap;
+    }
+
+    .staff-role-admin {
+        background-color: @xf-paletteColor3;
+    }
+
+    .staff-role-mod {
+        background-color: @xf-paletteColor3;
+    }
+}
+
+.staff-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+}
+
+.staff-card-name {
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a.username {
+        font-weight: 700;
+        color: @xf-linkColor;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.userTitle {
+    display: block;
+    font-size: @xf-fontSizeSmall;
+    color: @xf-textColorMuted;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.staff-card-blurb {
+    font-size: @xf-fontSizeSmall;
+    color: @xf-textColorMuted;
+    margin-bottom: 12px;
+}
+
+.staff-readmore-link {
+    margin-left: 6px;
+    font-size: @xf-fontSizeSmaller;
+    color: @xf-linkColor;
+    text-decoration: underline;
+
+    &:hover {
+        color: darken(@xf-linkColor, 10%);
+    }
+}
+
+.staff-message-button {
+    align-self: center;
+    margin-bottom: 12px;
+}
+
+.staff-pronouns {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    .staff-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .staff-card-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .staff-card-content {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: @xf-fontSizeLarger;
+        text-align: center;
+    }
+
+    .page-description {
+        text-align: center;
+    }
+
+    .block-header {
+        text-align: center;
+    }
+
+    .staff-list {
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .staff-card {
+        padding: @xf-paddingSmall;
+    }
+}]]></template>
+</templates>

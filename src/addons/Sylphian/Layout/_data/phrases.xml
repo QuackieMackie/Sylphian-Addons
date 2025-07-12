@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="guest_widget_paragraph_1" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<strong>Sylphian</strong> is an inclusive community built for LGBTQ+ individuals and allies, free from judgment or harassment.]]></phrase>
+  <phrase title="guest_widget_paragraph_2" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Some areas of the forum are only visible to registered members to help protect privacy and foster a safer environment. Please register to join the conversation and access the full site.]]></phrase>
+  <phrase title="guest_widget_site_warning" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[To access the full site you can log in or register.]]></phrase>
+  <phrase title="guest_widget_title" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Welcome to Sylphian]]></phrase>
+  <phrase title="widget_def.syl_guest_widget" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Guest Widget]]></phrase>
+  <phrase title="widget_def_desc.syl_guest_widget" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[]]></phrase>
+</phrases>

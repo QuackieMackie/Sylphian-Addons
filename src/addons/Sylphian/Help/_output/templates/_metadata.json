@@ -1,0 +1,17 @@
+{
+    "public/_help_page_rules.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "0ec450856c8590ea12f441ae1cca638d"
+    },
+    "public/_help_page_staff.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "cfee7ed3e945bbebcb4c87b62681d494"
+    },
+    "public/staff_page.less": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "59dd019b4531cf129d911667710712d7"
+    }
+}

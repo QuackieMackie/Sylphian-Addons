@@ -1,0 +1,12 @@
+{
+    "admin/widget_def_options_syl_guest_widget.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "public/syl_guest_widget.html": {
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "8382124d9d99433ff5bfd8d6ca9e1ac3"
+    }
+}

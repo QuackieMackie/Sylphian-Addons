@@ -1,0 +1,8 @@
+{
+    "page_name": "staff",
+    "display_order": 1,
+    "callback_class": "Sylphian\\Help\\Pages\\StaffPage",
+    "callback_method": "renderStaffList",
+    "advanced_mode": false,
+    "active": true
+}

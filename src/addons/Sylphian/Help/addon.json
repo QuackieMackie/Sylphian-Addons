@@ -1,0 +1,14 @@
+{
+    "legacy_addon_id": "",
+    "title": "Sylphian - Help Pages",
+    "description": "All the templates, phrase, etc, for the Sylphian help pages. ",
+    "version_id": 1000010,
+    "version_string": "1.0.0 Alpha",
+    "dev": "QuackieMackie",
+    "dev_url": "https://github.com/QuackieMackie",
+    "faq_url": "",
+    "support_url": "",
+    "extra_urls": [],
+    "require": [],
+    "icon": "fa-question-circle"
+}

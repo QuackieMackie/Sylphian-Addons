@@ -1,0 +1,174 @@
+.page-title {
+    font-size: @xf-fontSizeLargest;
+    font-weight: 700;
+    margin-bottom: @xf-paddingLarge;
+}
+
+.page-description {
+    font-size: @xf-fontSizeSmall;
+    color: @xf-textColorMuted;
+    margin-bottom: @xf-paddingLarge;
+}
+
+.staff-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.staff-card {
+    flex: 1 1 280px;
+    max-width: 280px;
+    min-width: 200px;
+    border: 1px solid @xf-borderColorLight;
+    border-radius: 6px;
+    padding: @xf-paddingMedium;
+    background: @xf-contentBg;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    margin-bottom: 8px;
+
+    &:hover {
+        box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+        transform: translateY(-2px);
+    }
+}
+
+.staff-card-main {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.staff-card-avatar {
+    position: relative;
+    flex-shrink: 0;
+    padding-bottom: 16px;
+    margin: 0 auto;
+
+    .staff-role-badge {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 4px;
+        font-size: 10px;
+        font-weight: 600;
+        color: #fff;
+        padding: 2px 6px;
+        border-radius: 12px;
+        text-transform: uppercase;
+        user-select: none;
+        white-space: nowrap;
+    }
+
+    .staff-role-admin {
+        background-color: @xf-paletteColor3;
+    }
+
+    .staff-role-mod {
+        background-color: @xf-paletteColor3;
+    }
+}
+
+.staff-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+}
+
+.staff-card-name {
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a.username {
+        font-weight: 700;
+        color: @xf-linkColor;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.userTitle {
+    display: block;
+    font-size: @xf-fontSizeSmall;
+    color: @xf-textColorMuted;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.staff-card-blurb {
+    font-size: @xf-fontSizeSmall;
+    color: @xf-textColorMuted;
+    margin-bottom: 12px;
+}
+
+.staff-readmore-link {
+    margin-left: 6px;
+    font-size: @xf-fontSizeSmaller;
+    color: @xf-linkColor;
+    text-decoration: underline;
+
+    &:hover {
+        color: darken(@xf-linkColor, 10%);
+    }
+}
+
+.staff-message-button {
+    align-self: center;
+    margin-bottom: 12px;
+}
+
+.staff-pronouns {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    .staff-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .staff-card-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .staff-card-content {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: @xf-fontSizeLarger;
+        text-align: center;
+    }
+
+    .page-description {
+        text-align: center;
+    }
+
+    .block-header {
+        text-align: center;
+    }
+
+    .staff-list {
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .staff-card {
+        padding: @xf-paddingSmall;
+    }
+}

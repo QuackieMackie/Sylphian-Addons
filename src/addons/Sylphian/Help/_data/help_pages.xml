@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<help_pages>
+  <help_page page_id="rules" page_name="rules" display_order="1" advanced_mode="0" active="1"/>
+  <help_page page_id="staff" page_name="staff" display_order="1" callback_class="Sylphian\Help\Pages\StaffPage" callback_method="renderStaffList" advanced_mode="0" active="1"/>
+</help_pages>

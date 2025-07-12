@@ -1,0 +1,106 @@
+<h1 class="page-title">{{ phrase('staff_members') }}</h1>
+<p class="page-description">
+    {{ phrase('meet_our_forum_staff_administrators_and_moderators') }}
+</p>
+
+<div class="block">
+    <div class="block-container">
+        <h2 class="block-header">{{ phrase('administrators') }}</h2>
+        <div class="block-body">
+            <xf:if is="$adminUsers.count()">
+                <div class="staff-list">
+                    <xf:foreach loop="$adminUsers" value="$user">
+                        <div class="staff-card block-row">
+                            <div class="staff-card-main">
+                                <div class="staff-card-avatar">
+                                    <xf:avatar user="$user" size="m" />
+                                    <span class="staff-role-badge staff-role-admin">
+                                        {{ phrase('administrator') }}
+                                    </span>
+                                </div>
+                                <div class="staff-card-content">
+                                    <h3 class="staff-card-name">
+                                        <a href="{{ link('members', $user) }}" class="username">{{ $user.username }}</a>
+                                    </h3>
+                                    <xf:if is="$user.Profile.custom_fields.pronouns">
+                                        <div class="staff-pronouns">
+                                            <xf:if is="is_array($user.Profile.custom_fields.pronouns)">
+                                                <xf:foreach loop="$user.Profile.custom_fields.pronouns" value="$pronoun">
+                                                    <span class="userBanner userBanner--syl_pro_{$pronoun}">
+                                                        {{ phrase_dynamic('user_field_choice.pronouns_' . $pronoun) }}
+                                                    </span>
+                                                </xf:foreach>
+                                                <xf:else />
+                                                <span class="userBanner userBanner--syl_pro_{$user.Profile.custom_fields.pronouns}">
+                                                    {{ phrase_dynamic('user_field_choice.pronouns_' . $user.Profile.custom_fields.pronouns) }}
+                                                </span>
+                                            </xf:if>
+                                        </div>
+                                    </xf:if>
+                                    <a href="{{ link('conversations/add', '', {'to': $user.username}) }}" class="button button--small staff-message-button">
+                                        {{ phrase('message') }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </xf:foreach>
+                </div>
+                <xf:else />
+                <div class="block-row">{{ phrase('no_administrators_to_display') }}</div>
+            </xf:if>
+        </div>
+    </div>
+</div>
+
+<div class="block">
+    <div class="block-container">
+        <h2 class="block-header">{{ phrase('moderators') }}</h2>
+        <div class="block-body">
+            <xf:if is="$modUsers.count()">
+                <div class="staff-list">
+                    <xf:foreach loop="$modUsers" value="$user">
+                        <div class="staff-card block-row">
+                            <div class="staff-card-main">
+                                <div class="staff-card-avatar">
+                                    <xf:avatar user="$user" size="m" />
+                                    <span class="staff-role-badge staff-role-mod">
+                                        {{ phrase('moderator') }}
+                                    </span>
+                                </div>
+                                <div class="staff-card-content">
+                                    <h3 class="staff-card-name">
+                                        <a href="{{ link('members', $user) }}" class="username">{{ $user.username }}</a>
+                                    </h3>
+                                    <xf:if is="$user.Profile.custom_fields.pronouns">
+                                        <div class="staff-pronouns">
+                                            <xf:if is="is_array($user.Profile.custom_fields.pronouns)">
+                                                <xf:foreach loop="$user.Profile.custom_fields.pronouns" value="$pronoun">
+                                                    <span class="userBanner userBanner--syl_pro_{$pronoun}">
+                                                        {{ phrase_dynamic('user_field_choice.pronouns_' . $pronoun) }}
+                                                    </span>
+                                                </xf:foreach>
+                                                <xf:else />
+                                                <span class="userBanner userBanner--syl_pro_{$user.Profile.custom_fields.pronouns}">
+                                                    {{ phrase_dynamic('user_field_choice.pronouns_' . $user.Profile.custom_fields.pronouns) }}
+                                                </span>
+                                            </xf:if>
+                                        </div>
+                                    </xf:if>
+                                    <a href="{{ link('conversations/add', '', {'to': $user.username}) }}" class="button button--small staff-message-button">
+                                        {{ phrase('message') }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </xf:foreach>
+                </div>
+                <xf:else />
+                <div class="block-row">{{ phrase('no_moderators_to_display') }}</div>
+            </xf:if>
+        </div>
+    </div>
+</div>
+
+<xf:css src="public:app_user_banners.less" />
+<xf:css src="public:extra.less" />
+<xf:css src="staff_page.less" />

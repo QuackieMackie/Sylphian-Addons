@@ -1,0 +1,44 @@
+{
+    "help_page_desc.rules.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "cee934af989b9e1f1f84cc607e9eb5c8"
+    },
+    "help_page_desc.staff.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "c7489be7d685e019722bcdd92116169e"
+    },
+    "help_page_title.rules.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "1f4da964f8eab62e96e8cfe406e44364"
+    },
+    "help_page_title.staff.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "850acdf804144a628d555c1d1576cd6e"
+    },
+    "meet_our_forum_staff_administrators_and_moderators.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "bcd24ef1daca6ddf6bf07e6154f5ddaa"
+    },
+    "no_moderators_to_display.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "468ad2adaab693141368418982479ae5"
+    },
+    "staff_members.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "850acdf804144a628d555c1d1576cd6e"
+    }
+}
