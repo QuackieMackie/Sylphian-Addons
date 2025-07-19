@@ -35,6 +35,12 @@
         "version_string": "1.0.0 Alpha",
         "hash": "468ad2adaab693141368418982479ae5"
     },
+    "rules_text.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "143b0d9816981b81dd20439c4543b0cd"
+    },
     "staff_members.txt": {
         "global_cache": false,
         "version_id": 1000010,
