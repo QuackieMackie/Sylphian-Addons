@@ -10,5 +10,11 @@
         "version_id": 1000010,
         "version_string": "1.0.0 Alpha",
         "hash": "48a61cc9c4c7dc55ff956434065de166"
+    },
+    "permission.general_viewProfileToolTip.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "2907ee4c764f2244447fd842689cc76d"
     }
 }

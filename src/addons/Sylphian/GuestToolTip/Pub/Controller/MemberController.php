@@ -12,16 +12,17 @@ class MemberController extends XFMember
         $this->assertNotEmbeddedImageRequest();
 
         $visitor = \XF::visitor();
+        $hasPermission = $visitor->hasPermission('general', 'viewProfileToolTip');
 
-        if (!$visitor->user_id) {
-            $viewParams = [
-                'isGuest' => true,
-            ];
-        } else {
+        if ($hasPermission) {
             $user = $this->assertViewableUser($params->user_id, [], true);
             $viewParams = [
                 'user' => $user,
-                'isGuest' => false
+                'hasPermission' => true
+            ];
+        } else {
+            $viewParams = [
+                'hasPermission' => false
             ];
         }
 
