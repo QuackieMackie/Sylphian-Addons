@@ -1,0 +1,20 @@
+{
+    "permission.general_viewProfileToolTip.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "2907ee4c764f2244447fd842689cc76d"
+    },
+    "sylphian_tooltip_text.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "a0775b9edb45694355f6635aca035a8f"
+    },
+    "sylphian_tooltip_title.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "48a61cc9c4c7dc55ff956434065de166"
+    }
+}

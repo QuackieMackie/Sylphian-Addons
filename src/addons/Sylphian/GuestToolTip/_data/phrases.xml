@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<phrases>
-  <phrase title="only_members_can_view_user_profiles" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Only registered members can view detailed user profiles.]]></phrase>
-  <phrase title="only_members_can_view_user_profiles_header" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Cannot Load]]></phrase>
-  <phrase title="permission.general_viewProfileToolTip" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[View Profile Tool Tip]]></phrase>
-</phrases>
